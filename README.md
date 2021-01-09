@@ -19,7 +19,7 @@ Front-end → Used HTML to interact with user request.
 
 ● Upload page - On this page users can upload files (zip, xlsx, xls, csv) along with their details.
 
-○ Upload Page has following Form Fields-
+○ Upload Page has following Form Fields- All fields are mandatory to be filled.
 
 ■ Project name
 
@@ -52,3 +52,9 @@ Front-end → Used HTML to interact with user request.
 2. Copy the url and paste in the brower to launch the API.
 
 3. Now you can upload, download and simply view the files.
+
+# Some challenges needs to be overcome
+1. Handling overriding problem with files which have same filename in same project folder.
+2. Handling the file duplication problem in a same project folder.
+3. Need to handle multiple files, received at a time in a single form field. (eg. song_metadata contains 2 or more files need to upload in a request)
+4. Need to provide Re-upload file option to user for correcting some incorrect file entered eariler.(Basically it is a update operation)
