@@ -1,5 +1,5 @@
 # General-Studio
-It is a web application with functionalities like file uploading, downloading and viewing.
+It is a web application with functionalities like file uploading, downloading and viewing.\n
 Note:- In the Oleic_assign.py file, Only above functionalities are implemented. 
 
 # Prerequisite:-
