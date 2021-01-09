@@ -1,0 +1,43 @@
+<html>
+<head><title> General Studio</title></head>
+
+  <boby>
+   <form enctype = "multipart/form-data" action="http://localhost:5000/viewed"  method='post'>
+   <h1>View details</h1>
+    <p>Please fill in this form to View your upload details.</p>
+    <hr>
+
+    <label for="ProjectName"><b>Project Name</b></label>
+    <input type="text" placeholder="Enter PName" name="PName" id="P_Name" required>
+
+    <label for="OrgName"><b>Organization Name</b></label>
+    <input type="text" placeholder="Enter OName" name="OName" id="O_Name" required>
+    
+    <input type="submit">
+    <hr>
+   </form>
+    <table style="width:100%">
+	
+	  <tr>
+		<th>Song_metadata</th>
+		<th>Song_file</th>
+		<th>video_metadata</th>
+		<th>video_file</th>
+		<th>image_metadata</th>
+		<th>image_file</th>
+	  </tr>
+	  {% for item in data %}
+		  <tr>
+		  {% for value in item %}
+			<td>{{value}} <a href= "/return-files/{{value}}" target='blank' ><br></br><button class='btn btn-default'>Download</button> </a> </td>
+          {% endfor %}			
+		  </tr>
+      {% endfor %}
+    </table>
+    <form  action="http://localhost:5000/">
+   <p>Back To upload Page..</p>
+   <button class='btn'>Upload</button>
+   </form>
+  </body>
+
+</html>

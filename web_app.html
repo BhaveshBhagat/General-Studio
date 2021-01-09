@@ -1,0 +1,47 @@
+<html>
+<head><title> General Studio</title></head>
+
+  <boby>
+   <form enctype = "multipart/form-data" action="http://localhost:5000/uploaded"  method='post'>
+   <h1>Upload details</h1>
+    <p>Please fill in this form to submit the uploaded details.</p>
+    <hr>
+
+    <label for="ProjectName"><b>Project Name</b></label>
+    <input type="text" placeholder="Enter PName" name="PName" id="P_Name" required>
+
+    <label for="OrgName"><b>Organization Name</b></label>
+    <input type="text" placeholder="Enter OName" name="OName" id="O_Name" required>
+    <br></br>
+    <label for="song-metadata"><b>Song Metadata</b></label>
+    <input type="file" accept=".xls,.xlsx,.csv" id="songMeta" name="song_metadata" multiple size="50" required>
+	
+	<label for="song-File"><b>Song File</b></label>
+    <input type="file" accept=".zip" id="songFile" name="song_file" multiple size="50" required>
+	<br></br>
+	<label for="videoMeta"><b>Video Metadata</b></label>
+    <input type="file" accept=".xls,.xlsx,.csv" id="videoMeta" name="video_Metadata" multiple size="50" required>
+	
+	<label for="video-File"><b>Video File</b></label>
+    <input type="file" accept=".zip" id="videoFile" name="video_file" multiple size="50" required>
+	<br></br>
+	<label for="imageMeta"><b>Image Metadata</b></label>
+    <input type="file" accept=".xls,.xlsx,.csv" id="imageMeta" name="image_Metadata" multiple size="50" required>
+	
+	<label for="image-File"><b>Image File</b></label>
+    <input type="file" accept=".zip" id="imageFile" name="image_file" multiple size="50" required>
+	<br></br>
+    <input type="submit">
+	
+    <hr>
+	<p> <b>{{ data }} </b></p>
+	<p>Note:- All fields are mandatory.
+	   Select one file at a time in each fields</p>
+   </form>
+   <form  action="http://localhost:5000/view">
+   <p>To check the Uploaded files, press view button.</p>
+   <button class='btn'>View</button>
+   </form>
+  </body>
+
+</html>
